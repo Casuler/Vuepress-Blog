@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-f7c5e176","path":"/zh/tag/javascript/","title":"JavaScript \u6807\u7B7E","lang":"en-US","frontmatter":{"title":"JavaScript \u6807\u7B7E","blog":{"type":"category","name":"JavaScript","key":"tag"},"layout":"Blog"},"excerpt":"","headers":[],"git":{},"readingTime":{"minutes":0,"words":0},"filePathRelative":null}');export{t as data};
