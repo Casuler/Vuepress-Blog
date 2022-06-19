@@ -66,7 +66,7 @@ features:
 
   - title: 复制按钮
     icon: copy
-    details: 一键复制代码块中的代码
+    details: 一键块中的代码
     link: https://vuepress-theme-hope.github.io/v2/zh/guide/feature/copy-code.html
 
   - title: 图片预览
