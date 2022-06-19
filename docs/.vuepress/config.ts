@@ -16,10 +16,10 @@ export default defineUserConfig({
       description: "天道酬勤",
     },
   },
-  // extendsMarkdown:(md)=>{
-  //   md.use(require("markdown-it-mathjax3"));
-  //   md.use(require("markdown-it-texmath"));
-  // },
+  extendsMarkdown:(md)=>{
+    md.use(require("markdown-it-mathjax3"));
+    md.use(require("markdown-it-texmath"));
+  },
   plugins:[
     searchPlugin({
       locales:{
