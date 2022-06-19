@@ -72,7 +72,6 @@ timeFromDate(new Date());  // 返回当前时间 09:00:00
 ```javascript
 const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
 capitalize("hello world")  // Hello world
-
 ```
 
 ### 2. 翻转字符串
@@ -82,7 +81,6 @@ capitalize("hello world")  // Hello world
 ```javascript
 const reverse = str => str.split('').reverse().join('');
 reverse('hello world');   // 'dlrow olleh'
-
 ```
 
 ### 3. 随机字符串
@@ -92,7 +90,6 @@ reverse('hello world');   // 'dlrow olleh'
 ```javascript
 const randomString = () => Math.random().toString(36).slice(2);
 randomString();
-
 ```
 
 ### 4. 截断字符串
@@ -102,7 +99,6 @@ randomString();
 ```javascript
 const truncateString = (string, length) => string.length < length ? string : `${string.slice(0, length - 3)}...`;
 truncateString('Hi, I should be truncated because I am too loooong!', 36)   // 'Hi, I should be truncated because...'
-
 ```
 
 ### 5. 去除字符串中的HTML
@@ -111,7 +107,6 @@ truncateString('Hi, I should be truncated because I am too loooong!', 36)   // '
 
 ```javascript
 const stripHtml = html => (new DOMParser().parseFromString(html, 'text/html')).body.textContent || '';
-
 ```
 
 ## 三、数组处理
@@ -123,7 +118,6 @@ const stripHtml = html => (new DOMParser().parseFromString(html, 'text/html')).b
 ```javascript
 const removeDuplicates = (arr) => [...new Set(arr)];
 console.log(removeDuplicates([1, 2, 2, 3, 3, 4, 4, 5, 5, 6]));
-
 ```
 
 ### 2. 判断数组是否为空
@@ -133,7 +127,6 @@ console.log(removeDuplicates([1, 2, 2, 3, 3, 4, 4, 5, 5, 6]));
 ```javascript
 const isNotEmpty = arr => Array.isArray(arr) && arr.length > 0;
 isNotEmpty([1, 2, 3]);  // true
-
 ```
 
 ### 3. 合并两个数组
@@ -143,7 +136,6 @@ isNotEmpty([1, 2, 3]);  // true
 ```javascript
 const merge = (a, b) => a.concat(b);
 const merge = (a, b) => [...a, ...b];
-
 ```
 
 ## 四、数字操作
@@ -155,7 +147,6 @@ const merge = (a, b) => [...a, ...b];
 ```javascript
 const isEven = num => num % 2 === 0;
 isEven(996);
-
 ```
 
 ### 2. 获得一组数的平均值
@@ -163,7 +154,6 @@ isEven(996);
 ```javascript
 const average = (...args) => args.reduce((a, b) => a + b) / args.length;
 average(1, 2, 3, 4, 5);   // 3
-
 ```
 
 ### 3. 获取两个整数之间的随机整数
@@ -173,7 +163,6 @@ average(1, 2, 3, 4, 5);   // 3
 ```javascript
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 random(1, 50);
-
 ```
 
 ### 4. 指定位数四舍五入
@@ -184,7 +173,6 @@ random(1, 50);
 const round = (n, d) => Number(Math.round(n + "e" + d) + "e-" + d)
 round(1.005, 2) //1.01
 round(1.555, 2) //1.56
-
 ```
 
 ## 五、颜色操作
@@ -196,7 +184,6 @@ round(1.555, 2) //1.56
 ```javascript
 const rgbToHex = (r, g, b) => "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 rgbToHex(255, 255, 255);  // '#ffffff'
-
 ```
 
 ### 2. 获取随机十六进制颜色
@@ -206,7 +193,6 @@ rgbToHex(255, 255, 255);  // '#ffffff'
 ```javascript
 const randomHex = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0")}`;
 randomHex();
-
 ```
 
 ## 六、浏览器操作
@@ -218,7 +204,6 @@ randomHex();
 ```javascript
 const copyToClipboard = (text) => navigator.clipboard.writeText(text);
 copyToClipboard("Hello World");
-
 ```
 
 ### 2. 清除所有cookie
@@ -227,7 +212,6 @@ copyToClipboard("Hello World");
 
 ```javascript
 const clearCookies = document.cookie.split(';').forEach(cookie => document.cookie = cookie.replace(/^ +/, '').replace(/=.*/, `=;expires=${new Date(0).toUTCString()};path=/`));
-
 ```
 
 ### 3. 获取选中的文本
@@ -237,7 +221,6 @@ const clearCookies = document.cookie.split(';').forEach(cookie => document.cooki
 ```javascript
 const getSelectedText = () => window.getSelection().toString();
 getSelectedText();
-
 ```
 
 ### 4. 检测是否是黑暗模式
@@ -247,7 +230,6 @@ getSelectedText();
 ```javascript
 const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
 console.log(isDarkMode)
-
 ```
 
 ### 5. 滚动到页面顶部
@@ -257,7 +239,6 @@ console.log(isDarkMode)
 ```javascript
 const goToTop = () => window.scrollTo(0, 0);
 goToTop();
-
 ```
 
 ### 6. 判断当前标签页是否激活
@@ -266,7 +247,6 @@ goToTop();
 
 ```javascript
 const isTabInView = () => !document.hidden;
-
 ```
 
 ### 7. 判断当前是否是苹果设备
@@ -276,7 +256,6 @@ const isTabInView = () => !document.hidden;
 ```javascript
 const isAppleDevice = () => /Mac|iPod|iPhone|iPad/.test(navigator.platform);
 isAppleDevice();
-
 ```
 
 ### 8. 是否滚动到页面底部
@@ -285,7 +264,6 @@ isAppleDevice();
 
 ```javascript
 const scrolledToBottom = () => document.documentElement.clientHeight + window.scrollY >= document.documentElement.scrollHeight;
-
 ```
 
 ### 9. 重定向到一个URL
@@ -295,7 +273,6 @@ const scrolledToBottom = () => document.documentElement.clientHeight + window.sc
 ```javascript
 const redirect = url => location.href = url
 redirect("https://www.google.com/")
-
 ```
 
 ### 10. 打开浏览器打印框
@@ -304,7 +281,6 @@ redirect("https://www.google.com/")
 
 ```javascript
 const showPrintDialog = () => window.print()
-
 ```
 
 ## 七、其他操作
@@ -316,7 +292,6 @@ const showPrintDialog = () => window.print()
 ```javascript
 const randomBoolean = () => Math.random() >= 0.5;
 randomBoolean();
-
 ```
 
 ### 2. 变量交换
@@ -325,7 +300,6 @@ randomBoolean();
 
 ```javascript
 [foo, bar] = [bar, foo];
-
 ```
 
 ### 3. 获取变量的类型
@@ -342,7 +316,6 @@ trueTypeOf({});     // object
 trueTypeOf([]);     // array
 trueTypeOf(0);      // number
 trueTypeOf(() => {});  // function
-
 ```
 
 ### 4. 华氏度和摄氏度之间的转化
@@ -357,7 +330,6 @@ celsiusToFahrenheit(0);     // 32
 celsiusToFahrenheit(-20);   // -4
 fahrenheitToCelsius(59);    // 15
 fahrenheitToCelsius(32);    // 0
-
 ```
 
 ### 5. 检测对象是否为空
@@ -366,6 +338,5 @@ fahrenheitToCelsius(32);    // 0
 
 ```javascript
 const isEmpty = obj => Reflect.ownKeys(obj).length === 0 && obj.constructor === Object;
-
 ```
 
