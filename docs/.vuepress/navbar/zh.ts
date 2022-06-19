@@ -15,9 +15,8 @@ export const zh = navbar([
         prefix: "article/",
         children: [
           { text: "工具整合", icon: "edit", link: "工具整合" },
-          "article2",
-          "article3",
-          "article4",
+          "常用的前端轮子",
+          "网站",
         ],
       },
       {
@@ -30,10 +29,13 @@ export const zh = navbar([
           "note/Java多线程",
         ],
       },
-      { text: "文章 9", icon: "edit", link: "article9" },
-      { text: "文章 10", icon: "edit", link: "article10" },
-      "article11",
-      "article12",
+      {
+        text: "前端",
+        icon: "edit",
+        children: [
+          "front-end/JavaScript/JavaScript导航",
+        ]
+      }
     ],
   },
   {
